@@ -1,0 +1,10 @@
+form {
+  border: 3px dotted grey;
+  padding: 2rem;
+  margin-top: 1rem;
+  width: 22rem;
+  text-align: center;
+}
+input {
+  text-align: center;
+}
