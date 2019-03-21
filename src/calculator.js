@@ -19,19 +19,19 @@ export default class Calculator {
       weekdayCode = (yearCode + monthCode + centuryCode + this.day - leapYearCode) % 7;
     }
     let output = weekday[weekdayCode];
-    console.log(yearCode);
+    console.log(yearCode, monthCode, centuryCode, this.day, leapYearCode);
     return output;
   }
 
   getYearCode() {
     let yearCode = null;
-    if(this.year >= 1700 && this.year <= 1799) { yearCode = ((this.year - 1700) + ((this.year - 1700) / 4)) % 7; }
-    if(this.year >= 1800 && this.year <= 1899) { yearCode = ((this.year - 1800) + ((this.year - 1800) / 4)) % 7; }
-    if(this.year >= 1900 && this.year <= 1999) { yearCode = ((this.year - 1900) + ((this.year - 1900) / 4)) % 7; }
-    if(this.year >= 2000 && this.year <= 2099) { yearCode = ((this.year - 2000) + ((this.year - 2000) / 4)) % 7; }
-    if(this.year >= 2100 && this.year <= 2199) { yearCode = ((this.year - 2100) + ((this.year - 2100) / 4)) % 7; }
-    if(this.year >= 2200 && this.year <= 2299) { yearCode = ((this.year - 2200) + ((this.year - 2200) / 4)) % 7; }
-    if(this.year >= 2300 && this.year <= 2399) { yearCode = ((this.year - 2300) + ((this.year - 2300) / 4)) % 7; }
+    if(this.year >= 1700 && this.year <= 1799) { yearCode = ((this.year - 1700) + Math.floor((this.year - 1700) / 4)) % 7; }
+    if(this.year >= 1800 && this.year <= 1899) { yearCode = ((this.year - 1800) + Math.floor((this.year - 1800) / 4)) % 7; }
+    if(this.year >= 1900 && this.year <= 1999) { yearCode = ((this.year - 1900) + Math.floor((this.year - 1900) / 4)) % 7; }
+    if(this.year >= 2000 && this.year <= 2099) { yearCode = ((this.year - 2000) + Math.floor((this.year - 2000) / 4)) % 7; }
+    if(this.year >= 2100 && this.year <= 2199) { yearCode = ((this.year - 2100) + Math.floor((this.year - 2100) / 4)) % 7; }
+    if(this.year >= 2200 && this.year <= 2299) { yearCode = ((this.year - 2200) + Math.floor((this.year - 2200) / 4)) % 7; }
+    if(this.year >= 2300 && this.year <= 2399) { yearCode = ((this.year - 2300) + Math.floor((this.year - 2300) / 4)) % 7; }
     return yearCode;
   }
 
