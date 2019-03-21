@@ -13,7 +13,6 @@ $(document).ready( function() {
         let year = dateInput.getFullYear();
         let date = new Calculator(day, month, year);
         let result = date.getWeekday();
-        console.log(result);
         $('#output').prepend(result);
     });
 });

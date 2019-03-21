@@ -50,9 +50,10 @@ export default class Calculator {
   getCenturyCode() {
     let centuryCode = null;
     if((this.year >= 1900 && this.year <= 1999) || (this.year >= 2300 && this.year <= 2399)) { centuryCode = 0; }
+    if((this.year >= 0 && this.year <= 999)) { centuryCode = -1; }
     if((this.year >= 1800 && this.year <= 1899) || (this.year >= 2200 && this.year <= 2299)) { centuryCode = 2; }
     if((this.year >= 1700 && this.year <= 1799) || (this.year >= 2100 && this.year <= 2199)) { centuryCode = 4; }
-    if(this.year >= 2000 && this.year <= 2099) { centuryCode = 6; }
+    if((this.year >= 2000 && this.year <= 2099)) { centuryCode = 6; }
     return centuryCode;
   }
 
